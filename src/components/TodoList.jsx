@@ -1,6 +1,10 @@
 import React from 'react'
 import { MdDeleteForever } from 'react-icons/md'
 const TodoList = ({ item, index, deleteItem, toggleCompleted }) => {
+  const handleDeleteButton = (e)=>{
+    e.stopPropagation();
+    deleteItem(index)
+  }
   return (
     <div className='list-container'>
       <li className={item.completed ? 'todo-list completed' : 'todo-list'}
@@ -10,9 +14,7 @@ const TodoList = ({ item, index, deleteItem, toggleCompleted }) => {
         {item.text}
         <button
           className='delete-btn'
-          onClick={(e) => {
-            deleteItem(index)
-          }}><MdDeleteForever /></button>
+          onClick={handleDeleteButton}><MdDeleteForever /></button>
       </li>
     </div>
   )
