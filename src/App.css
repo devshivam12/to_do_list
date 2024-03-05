@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.center-container {
+  
+  height: 500px;
+  width: 400px;
+}
+
+/* whenever some one click on it the color represent that the task is completed  */
+
+.completed {
+  text-decoration: line-through;
+  background: #bdffc1;
+  
+}
+.total-conter{
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-text{
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.input-box {
+  width: 100%;
+  padding: 10px;
+  margin-right: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 44px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: #188038;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+.line{
+  border: .5px solid #e9e9e9;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+.list-container{
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.todo-list{
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.delete-btn{
+  background: transparent;
+  color:#D11919;
+  border: 0;
+  font-size: 2rem;
+  cursor: pointer;
+}
