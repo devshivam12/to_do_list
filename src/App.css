@@ -16,18 +16,7 @@
   width: 400px;
 }
 
-/* whenever some one click on it the color represent that the task is completed  */
 
-.completed {
-  text-decoration: line-through;
-  background: #bdffc1;
-  
-}
-.total-conter{
-  margin: 1.5rem 0;
-  text-align: center;
-  font-size: 1.5rem;
-}
 .main-input {
   width: 100%;
   display: flex;
@@ -81,10 +70,31 @@
   justify-content: space-between;
   
 }
+.list-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-item input{
+  margin-right: 20px;
+}
 .delete-btn{
   background: transparent;
   color:#D11919;
   border: 0;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.total-counter{
+  margin: 1.5rem 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* whenever some one click on it the color represent that the task is completed  */
+
+.isChecked{
+  text-decoration: line-through;
+  color: #888;
 }

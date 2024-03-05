@@ -3,14 +3,25 @@ import React, { useState } from 'react'
 const TodoInput = ({ addList }) => {
     const [inputText, setInputText] = useState()
 
+    const handleChange = (e) => {
+        setInputText(e.target.value)
+    }
+
+    const handlelAddTask = (e) => {
+        e.preventDefault()
+        if (inputText.trim() === '') {
+          
+            return;
+        }
+        addList(inputText)
+        setInputText('')
+    }
     return (
-        <div className='main-input'>
+        <form className='main-input' onSubmit={handlelAddTask}>
             <input type="text"
                 className='input-box'
                 value={inputText}
-                onChange={(e) => {
-                    setInputText(e.target.value)
-                }}
+                onChange={handleChange}
                 placeholder='Enter you to-do'
             />
             <button
@@ -25,7 +36,7 @@ const TodoInput = ({ addList }) => {
                     }
                 }}>+</button>
 
-        </div>
+        </form>
     )
 }
 
